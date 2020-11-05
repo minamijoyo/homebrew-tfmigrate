@@ -2,16 +2,16 @@
 class Tfmigrate < Formula
   desc "A Terraform state migration tool for GitOps"
   homepage "https://github.com/minamijoyo/tfmigrate"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.1.0/tfmigrate_0.1.0_darwin_amd64.tar.gz"
-    sha256 "2567725f89944173d906b1be37c987ac72f74f7c39475d4d11a105ae41887b25"
+    url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.1.1/tfmigrate_0.1.1_darwin_amd64.tar.gz"
+    sha256 "40c947f7cdf7c7bc0083d6d82b07ca40674682e46b5bb7ec4b0d32633a6b8637"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.1.0/tfmigrate_0.1.0_linux_amd64.tar.gz"
-      sha256 "75076a918cecf12078a6104a666025d9b7691345c4beb643a088744bdcf38a50"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.1.1/tfmigrate_0.1.1_linux_amd64.tar.gz"
+      sha256 "0dc4cc779830b2368ed6bd867396e31556e599ca683b3a71123278bb1ed23bfd"
     end
   end
 
