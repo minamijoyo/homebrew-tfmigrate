@@ -5,12 +5,20 @@
 class Tfmigrate < Formula
   desc "A Terraform state migration tool for GitOps"
   homepage "https://github.com/minamijoyo/tfmigrate"
-  version "0.2.12"
+  version "0.2.13"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.2.13/tfmigrate_0.2.13_darwin_arm64.tar.gz"
+      sha256 "cc80684ddcf1cc9d0d6f7f3a37d412d5b8a70011770911851bb82a93fa0ff2a9"
+
+      def install
+        bin.install "tfmigrate"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.2.12/tfmigrate_0.2.12_darwin_amd64.tar.gz"
-      sha256 "0fee60b7b935c8f5dca4944cfa8302dab15811b78b91549b029fd2fbdd713d6c"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.2.13/tfmigrate_0.2.13_darwin_amd64.tar.gz"
+      sha256 "a1526848a4ad4ec8b3e225bdfae02d5ed370ba77702ec5fe4180035da27f2ce4"
 
       def install
         bin.install "tfmigrate"
@@ -19,9 +27,17 @@ class Tfmigrate < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.2.13/tfmigrate_0.2.13_linux_arm64.tar.gz"
+      sha256 "7de08c5e15125a7aa71a446bb6d3d514c68995ccf12f909f6bf02f23291888d4"
+
+      def install
+        bin.install "tfmigrate"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.2.12/tfmigrate_0.2.12_linux_amd64.tar.gz"
-      sha256 "480ef8f584eaaece2e6c36c443615f327de4fa2523af469e9a92b8ff15090d7c"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.2.13/tfmigrate_0.2.13_linux_amd64.tar.gz"
+      sha256 "f515e5603826d903846659eff5763efd0c53bb57dbf959bdfd2effa14f25005d"
 
       def install
         bin.install "tfmigrate"
