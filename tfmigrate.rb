@@ -5,20 +5,20 @@
 class Tfmigrate < Formula
   desc "A Terraform state migration tool for GitOps"
   homepage "https://github.com/minamijoyo/tfmigrate"
-  version "0.3.11"
+  version "0.3.12"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.11/tfmigrate_0.3.11_darwin_arm64.tar.gz"
-      sha256 "b569941b5144b60937beb9cc391c846ab320ec29fd957dd2f137f710008c8cf2"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.12/tfmigrate_0.3.12_darwin_arm64.tar.gz"
+      sha256 "ab3c6c460965a93bdb556ee0b162131e51806197637ffb0f847aa747ab38d32a"
 
       def install
         bin.install "tfmigrate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.11/tfmigrate_0.3.11_darwin_amd64.tar.gz"
-      sha256 "c32c78ec20af8bb3d4451398601f8a80aba0c06b0f50f8d3931167e75457fe4f"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.12/tfmigrate_0.3.12_darwin_amd64.tar.gz"
+      sha256 "7a43732eb080314452a3cc1f312dfb76ec7ed155d6a2af19f19acee8ab668fdf"
 
       def install
         bin.install "tfmigrate"
@@ -27,17 +27,17 @@ class Tfmigrate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.11/tfmigrate_0.3.11_linux_amd64.tar.gz"
-      sha256 "cb1a005859350d6ae19d56b96243bb3c3b179b6e77335d15f3d5cef858c3f8ae"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.12/tfmigrate_0.3.12_linux_arm64.tar.gz"
+      sha256 "35659bf012632f55814b871cc5e9b7449d97c400c073234f6b269450c8357668"
 
       def install
         bin.install "tfmigrate"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.11/tfmigrate_0.3.11_linux_arm64.tar.gz"
-      sha256 "7fc181980ebdb24013a1d2056c1f8db39d4a35b71b22dd5dae186c0b618ea151"
+    if Hardware::CPU.intel?
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.12/tfmigrate_0.3.12_linux_amd64.tar.gz"
+      sha256 "71cee4bf4381225e057625cf0da9c142169cc1fb13c678abfe00bf50e71458f3"
 
       def install
         bin.install "tfmigrate"
