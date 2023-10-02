@@ -5,20 +5,20 @@
 class Tfmigrate < Formula
   desc "A Terraform state migration tool for GitOps"
   homepage "https://github.com/minamijoyo/tfmigrate"
-  version "0.3.16"
+  version "0.3.17"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.16/tfmigrate_0.3.16_darwin_arm64.tar.gz"
-      sha256 "9f6ca2b8683a7e72f67104a8c77261d8c7c43649085f998d0fc3e7a0a41feacd"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.17/tfmigrate_0.3.17_darwin_arm64.tar.gz"
+      sha256 "114c1e368850cd09b9a584fb5219e8897cb47c2a243706aeadf93500e28d877f"
 
       def install
         bin.install "tfmigrate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.16/tfmigrate_0.3.16_darwin_amd64.tar.gz"
-      sha256 "cbc2750efb8c57995ad5d68122c88dfbe9539a655ad435ceb346e627bdd32d21"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.17/tfmigrate_0.3.17_darwin_amd64.tar.gz"
+      sha256 "d59573b287c33e76d1a1d4b36ba65bd51c6e0ed4f9b2f017795edfac653b3823"
 
       def install
         bin.install "tfmigrate"
@@ -28,16 +28,16 @@ class Tfmigrate < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.16/tfmigrate_0.3.16_linux_amd64.tar.gz"
-      sha256 "b64124ae4ededd433a16649703079fce11f15a191140c9d9e17d0d0f0478080e"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.17/tfmigrate_0.3.17_linux_amd64.tar.gz"
+      sha256 "68c1618c9d34e0d2b4e1a8bd2ade6aa0b494ad55a5aba71ae93ef7fb626908a2"
 
       def install
         bin.install "tfmigrate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.16/tfmigrate_0.3.16_linux_arm64.tar.gz"
-      sha256 "c78785db8928c5895e5925fe78638eaf8d838476619472dbb7fc920be84e2493"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.3.17/tfmigrate_0.3.17_linux_arm64.tar.gz"
+      sha256 "770935cf42718c5f8505fe555f4e70f5736b90f5ce6fa60fb419c233f315a932"
 
       def install
         bin.install "tfmigrate"
