@@ -5,20 +5,20 @@
 class Tfmigrate < Formula
   desc "A Terraform / OpenTofu state migration tool for GitOps"
   homepage "https://github.com/minamijoyo/tfmigrate"
-  version "0.4.3"
+  version "0.4.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.4.3/tfmigrate_0.4.3_darwin_amd64.tar.gz"
-      sha256 "24d54ff1468e4059c38cadccf2af6ffd4e0a5458835c95505ecd318c24cec94b"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.4.4/tfmigrate_0.4.4_darwin_amd64.tar.gz"
+      sha256 "3ac9a4f860d277712aff98f0cc7a3c46fce25e764de95b31fcd24649fe357195"
 
       def install
         bin.install "tfmigrate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.4.3/tfmigrate_0.4.3_darwin_arm64.tar.gz"
-      sha256 "9a871991d60437fee1746b163b29c150fdbd583dee4bbfb553586a61e58c3114"
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.4.4/tfmigrate_0.4.4_darwin_arm64.tar.gz"
+      sha256 "819e3811007160832d0624a33233490dea810756711fa356f54d5c8a80a4452b"
 
       def install
         bin.install "tfmigrate"
@@ -27,16 +27,16 @@ class Tfmigrate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.4.3/tfmigrate_0.4.3_linux_amd64.tar.gz"
-      sha256 "03d29b33783082748d32ab4d9bb47558bcfdc8b7da58d1802b9c07d5b8630602"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.4.4/tfmigrate_0.4.4_linux_amd64.tar.gz"
+      sha256 "2000827c023108d4627643f5ed1a44e4f577f70802b4c4271c5581da81d4657e"
       def install
         bin.install "tfmigrate"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.4.3/tfmigrate_0.4.3_linux_arm64.tar.gz"
-      sha256 "f3910878f3f196afc572fecd2a3eb7f6d49f25ef453e06c5adf5119d95db4985"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/minamijoyo/tfmigrate/releases/download/v0.4.4/tfmigrate_0.4.4_linux_arm64.tar.gz"
+      sha256 "579ca7bd9fd7c24d11ad372f18f95fefe604349a7cd72a8be05d1e990c9b965b"
       def install
         bin.install "tfmigrate"
       end
